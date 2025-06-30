@@ -114,6 +114,9 @@
       margin-top: 1rem;
       display: none;
     }
+    .hidden {
+      display: none;
+    }
     footer {
       background: #0d1b2a;
       color: white;
@@ -143,7 +146,7 @@
       <input type="tel" name="Phone" placeholder="Phone Number" required>
       <input type="text" name="Vehicle" placeholder="Vehicle" required>
       <input type="text" name="Address" placeholder="Address Location" required>
-      <select name="Service" required>
+      <select name="Service" id="service-select" required>
         <option value="">Select a Service</option>
         <option value="Interior Detailing">Interior Detailing</option>
         <option value="Exterior Detailing">Exterior Detailing</option>
@@ -153,6 +156,14 @@
         <option value="Oil Changes">Oil Changes</option>
         <option value="Brake Changes">Brake Changes</option>
       </select>
+      <div id="level-select-container" class="hidden">
+        <label for="level">Select Level</label>
+        <select name="Level" id="level">
+          <option value="">-- Select Level --</option>
+          <option value="Light Detail">Light Detail</option>
+          <option value="Extreme Detail">Extreme Detail</option>
+        </select>
+      </div>
       <input type="datetime-local" name="DateTime" required>
       <textarea name="Comments" placeholder="Other comments (e.g., Excessive dirt, Pet hair, etc)"></textarea>
       <input type="hidden" name="_captcha" value="false">
@@ -180,11 +191,22 @@
   <script>
     const form = document.getElementById('booking-form');
     const confirmation = document.getElementById('confirmation-msg');
+    const serviceSelect = document.getElementById('service-select');
+    const levelContainer = document.getElementById('level-select-container');
 
     form.addEventListener('submit', function(e) {
       setTimeout(() => {
         confirmation.style.display = 'block';
-      }, 500); // Slight delay to mimic response timing
+      }, 500);
+    });
+
+    serviceSelect.addEventListener('change', function() {
+      const selected = this.value;
+      if (selected === 'Interior Detailing' || selected === 'Exterior Detailing') {
+        levelContainer.classList.remove('hidden');
+      } else {
+        levelContainer.classList.add('hidden');
+      }
     });
   </script>
 </body>
