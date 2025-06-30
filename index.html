@@ -17,17 +17,36 @@
       color: #333;
     }
     header {
-      background: #0d1b2a;
+      background: skyblue;
       color: white;
-      padding: 2rem;
-      text-align: center;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    header img {
-      max-width: 200px;
-      margin-bottom: 1rem;
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    header h1 {
-      font-size: 2.5rem;
+    .logo-section img {
+      max-width: 80px;
+      margin-bottom: 0.25rem;
+    }
+    .logo-section p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
     }
     section {
       padding: 2rem;
@@ -81,9 +100,16 @@
 </head>
 <body>
   <header>
-    <img src="LOGO.png" alt="NorthDrift Logo" />
-    <h1>NorthDrift Mobile Detailing</h1>
-    <p>Precision. Passion. Performance.</p>
+    <div class="logo-section">
+      <img src="LOGO.png" alt="NorthDrift Logo" />
+      <p>Precision. Passion. Performance.</p>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Interior</a>
+      <a href="#">Exterior</a>
+      <a href="#">Quotes</a>
+    </nav>
   </header>
   <section class="services">
     <h2>Our Services</h2>
@@ -98,7 +124,7 @@
   </section>
   <section class="contact">
     <h2>Book a Detail</h2>
-    <form>
+    <form action="#" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required />
 
