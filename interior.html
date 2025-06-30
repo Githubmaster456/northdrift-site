@@ -78,14 +78,10 @@
       margin-bottom: 1rem;
     }
     .pricing-table {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 2rem;
-    }
-    .column {
-      flex: 1;
-      min-width: 200px;
+      text-align: left;
     }
     .column h2 {
       color: #0d1b2a;
@@ -103,6 +99,9 @@
     }
     .price-entry p {
       margin: 0;
+    }
+    .price-text {
+      padding-left: 65px;
     }
     footer {
       background: #0d1b2a;
@@ -154,26 +153,18 @@
         </div>
       </div>
       <div class="column">
-        <h2>Light Detail</h2>
-        <div class="price-entry">
+        <h2>Basic Detail</h2>
+        <div class="price-text">
           <p>$30</p>
-        </div>
-        <div class="price-entry">
           <p>$40</p>
-        </div>
-        <div class="price-entry">
           <p>$50</p>
         </div>
       </div>
       <div class="column">
-        <h2>Extreme Detail</h2>
-        <div class="price-entry">
+        <h2>Full Detail</h2>
+        <div class="price-text">
           <p>$150</p>
-        </div>
-        <div class="price-entry">
           <p>$200</p>
-        </div>
-        <div class="price-entry">
           <p>$250</p>
         </div>
       </div>
