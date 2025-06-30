@@ -66,20 +66,20 @@
     .interior-section {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
     }
-    .interior-text, .extreme-text {
+    .interior-text {
       flex: 1;
       min-width: 250px;
     }
-    .interior-text h1, .extreme-text h1 {
+    .interior-text h1 {
       font-size: 2.2rem;
       color: #0d1b2a;
       margin-bottom: 1rem;
     }
-    .interior-text p, .extreme-text p {
+    .interior-text p {
       font-size: 1.1rem;
       line-height: 1.6;
       color: #333;
@@ -107,13 +107,8 @@
     }
     .pricing-section {
       margin-top: 3rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 4rem;
     }
     .vehicle-category {
-      flex: 1;
       margin-bottom: 2rem;
       overflow: hidden;
     }
@@ -149,23 +144,42 @@
 
     <section class="interior-section">
       <div class="interior-text">
-        <h1>Light Detail</h1>
-        <p>
-          Quick vacuuming of carpets and seats. Wipe-down of dash, console, and door panels. Light cleaning of windows. No shampooing or deep stain removal. Ideal for maintaining vehicles between full details.
-        </p>
-        <p><em>Prices: Small - $50, Medium - $70, Large - $80</em></p>
-      </div>
-      <div class="extreme-text">
-        <h1>Extreme Detail</h1>
+        <h1>Interior</h1>
         <p>
           Our Interior Detailing service begins with a deep vacuuming of all upholstery and carpeted areas.
           We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats.
           Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
         </p>
         <p><em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em></p>
-        <div class="book-button">
-          <a href="Bookings.html">Book Now</a>
-        </div>
+      </div>
+      <div class="book-button">
+        <a href="Bookings.html">Book Now</a>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="vehicle-category">
+        <img src="smallB.png" alt="Small Vehicle">
+        <h3>Small Vehicle - $150</h3>
+        <p>
+          Small vehicles typically include compact and subcompact cars such as the Honda Civic, Toyota Corolla, Ford Fiesta, Hyundai Elantra, and Volkswagen Golf. Most small cars take about 2 to 3 hours to complete a full interior detail.
+        </p>
+      </div>
+
+      <div class="vehicle-category">
+        <img src="mediumB.png" alt="Medium Vehicle">
+        <h3>Medium Vehicle - $200</h3>
+        <p>
+          Medium vehicles generally include larger sedans, small SUVs, and crossovers such as the Toyota Camry, Honda Accord, Mazda CX-5, Ford Escape, and Subaru Outback. These cars offer more cabin space and require slightly more attention to detail for complete interior care. Interior detailing for these vehicles usually takes between 3 to 4.5 hours.
+        </p>
+      </div>
+
+      <div class="vehicle-category">
+        <img src="largeB.png" alt="Large Vehicle">
+        <h3>Large Vehicle - $250</h3>
+        <p>
+          Large vehicles include full-size SUVs, trucks, and minivans such as the Ford F-150, Chevrolet Tahoe, Toyota Sienna, GMC Yukon, and Honda Pilot. These require extended detailing time due to additional surface area, third-row seating, and cargo space cleaning. Expect 4 to 6+ hours for a full interior detail.
+        </p>
       </div>
     </section>
   </div>
