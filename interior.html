@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Interior Detailing - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
@@ -87,7 +87,8 @@
     .book-button {
       min-width: 200px;
     }
-    .book-button button {
+    .book-button a {
+      display: inline-block;
       padding: 0.9rem 1.5rem;
       background-color: #166534;
       color: white;
@@ -97,8 +98,10 @@
       font-weight: 600;
       cursor: pointer;
       transition: transform 0.2s ease, background-color 0.2s ease;
+      text-decoration: none;
+      text-align: center;
     }
-    .book-button button:hover {
+    .book-button a:hover {
       transform: scale(1.1);
       background-color: #14532d;
     }
@@ -107,6 +110,7 @@
     }
     .vehicle-category {
       margin-bottom: 2rem;
+      overflow: hidden;
     }
     .vehicle-category img {
       float: left;
@@ -128,7 +132,7 @@
   <div class="content">
     <header>
       <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo">
+        <img src="LOGO2.png" alt="NorthDrift Logo" />
         <p>Precision. Passion. Performance.</p>
         <p>Professional detailers located in Spokane, WA</p>
       </div>
@@ -148,7 +152,7 @@
         </p>
       </div>
       <div class="book-button">
-        <button>Book Now</button>
+        <a href="Bookings.html">Book Now</a>
       </div>
     </section>
 
@@ -156,19 +160,25 @@
       <div class="vehicle-category">
         <img src="smallB.png" alt="Small Vehicle">
         <h3>Small Vehicle - $150</h3>
-        <p>Examples of small vehicles include coupes and sedans
+        <p>
+          Small vehicles typically include compact and subcompact cars such as the Honda Civic, Toyota Corolla, Ford Fiesta, Hyundai Elantra, and Volkswagen Golf. These cars are designed for efficiency and urban commuting and are ideal for quick, detailed cleaning services.
+        </p>
       </div>
 
       <div class="vehicle-category">
         <img src="mediumB.png" alt="Medium Vehicle">
         <h3>Medium Vehicle - $200</h3>
-        <p>Medium Vehciles include larger sedans, smaller Suv.</p>
+        <p>
+          Medium vehicles generally include larger sedans, small SUVs, and crossovers such as the Toyota Camry, Honda Accord, Mazda CX-5, Ford Escape, and Subaru Outback. These cars offer more cabin space and require slightly more attention to detail for complete interior care.
+        </p>
       </div>
 
       <div class="vehicle-category">
         <img src="largeB.png" alt="Large Vehicle">
         <h3>Large Vehicle - $250</h3>
-        <p>Large vehicles include SUVs, trucks, and minivans ect.</p>
+        <p>
+          Large vehicles include full-size SUVs, trucks, and minivans such as the Ford F-150, Chevrolet Tahoe, Toyota Sienna, GMC Yukon, and Honda Pilot. These require extended detailing time due to additional surface area, third-row seating, and cargo space cleaning.
+        </p>
       </div>
     </section>
   </div>
