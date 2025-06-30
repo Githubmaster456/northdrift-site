@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NorthDrift Mobile Detailing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
     }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -54,92 +58,51 @@
     .nav-links a:hover {
       transform: scale(1.2);
     }
-    section {
+    .services-section {
       padding: 2rem;
       max-width: 1100px;
       margin: auto;
-    }
-    .services-contact-wrapper {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
       gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    .services {
-      flex: 1;
-      min-width: 300px;
+    .service-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 250px;
     }
-    .services h2 {
+    .service-card h3 {
       color: #0d1b2a;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      text-align: left;
+      margin-bottom: 0.5rem;
     }
-    .services ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .services ul li {
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease, color 0.2s ease;
-    }
-    .services ul li:hover {
-      transform: scale(1.1);
-      color: #0077cc;
-    }
-    .contact {
-      flex: 1;
-      min-width: 300px;
-    }
-    .contact h2 {
-      color: #0d1b2a;
-      margin-bottom: 1.5rem;
-      font-size: 1.75rem;
-    }
-    .contact form {
-      display: flex;
-      flex-direction: column;
-    }
-    .contact label {
+    .service-card a {
+      display: inline-block;
       margin-top: 1rem;
-    }
-    .contact input, .contact textarea {
-      padding: 0.5rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact button {
-      margin-top: 1.5rem;
-      padding: 0.9rem;
-      background-color: #28a745;
+      padding: 0.6rem 1.2rem;
+      background-color: #166534;
       color: white;
-      border: none;
       border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-      font-size: 1.2rem;
+      text-decoration: none;
       font-weight: 600;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
-    .contact button:hover {
-      transform: scale(1.1);
-      background-color: #218838;
+    .service-card a:hover {
+      transform: scale(1.05);
+      background-color: #14532d;
     }
     footer {
       background: #0d1b2a;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
     }
   </style>
 </head>
-<body id="top" style="display: flex; flex-direction: column; min-height: 100vh;">
+<body>
   <header>
     <div class="logo-section">
       <img src="LOGO2.png" alt="NorthDrift Logo" />
@@ -147,41 +110,26 @@
       <p>Professional detailers located in Spokane, WA</p>
     </div>
     <nav class="nav-links">
-      <a href="#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="Bookings.html">Quotes</a>
     </nav>
   </header>
-  <div class="content" style="flex: 1;">
-  <section class="services-contact-wrapper">
-    <div class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li><a href="interior.html" style="text-decoration: none; color: inherit;">Interior Detailing</a></li>
-        <li><a href="#exterior-detailing" style="text-decoration: none; color: inherit;">Exterior Detailing</a></li>
-        <li>Paint Correction</li>
-        <li>Ceramic Coating <em>(coming soon)</em></li>
-        <li>Headlight Restoration</li>
-        <li>Oil Changes</li>
-        <li>Brake Changes</li>
-        <p><em>Mobile Service at Your Location</em></p>
-      </ul>
+
+  <section class="services-section">
+    <div class="service-card">
+      <h3>Interior Detailing</h3>
+      <a href="Interior.html">Learn More</a>
     </div>
-    <div class="contact">
-  <h2>Our Craftsmanship</h2>
-  <p>At NorthDrift Mobile Detailing, we believe every vehicle deserves premium care. Our experienced team takes pride in restoring and preserving your vehicle's appearance with meticulous attention to detail. Whether it’s a full detail or a focused service, our commitment to quality and customer satisfaction drives everything we do.</p>
-</div>
+    <div class="service-card">
+      <h3>Exterior Detailing</h3>
+      <a href="Exterior.html">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3><em>Ceramic Coating</em></h3>
+      <p><em>Coming Soon</em></p>
+    </div>
   </section>
 
-  <section>
-    <h2 style="color: #0d1b2a; font-size: 2rem; text-align: center; margin-bottom: 1.5rem;">Our Work</h2>
-    <p style="text-align: center; font-size: 1.1rem; color: #555;">Stay tuned for a showcase of our finest detailing jobs, transformations, and satisfied clients. Images coming soon.</p>
-  </section>
-
-  
-
-  
-
-  </div>
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
   </footer>
