@@ -1,178 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interior Detailing - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      height: 100%;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-    }
-    .content {
-      flex: 1;
-    }
-    header {
-      background: url('Background.png') no-repeat center center/cover;
-      color: white;
-      padding: 2.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .logo-section {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .logo-section img {
-      max-width: 180px;
-      height: auto;
-      margin-bottom: 0.25rem;
-    }
-    .logo-section p {
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-    }
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      font-size: 1.2rem;
-      transition: transform 0.2s ease;
-    }
-    .nav-links a:hover {
-      transform: scale(1.2);
-    }
-    section {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .interior-section {
-      margin-bottom: 2rem;
-    }
-    .interior-text h1 {
-      font-size: 2.4rem;
-      color: #0d1b2a;
-      margin-bottom: 1rem;
-    }
-    .interior-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-    .pricing-table {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      text-align: left;
-    }
-    .column h2 {
-      color: #0d1b2a;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
-    .price-entry {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .price-entry img {
-      width: 50px;
-      margin-right: 1rem;
-    }
-    .price-entry p {
-      margin: 0;
-    }
-    .price-text {
-      padding-left: 65px;
-    }
-    footer {
-      background: #0d1b2a;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="content">
-    <header>
-      <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo" />
-        <p>Precision. Passion. Performance.</p>
-        <p>Professional detailers located in Spokane, WA</p>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Bookings.html">Quotes</a>
-      </nav>
-    </header>
-
-    <section class="interior-section">
-      <div class="interior-text">
-        <h1>Interior Detail</h1>
-        <p>
-          Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal. 
-          Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas. We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats. We will make your interior look like the day it came off the lot. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
-        </p>
-        <p><em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em></p>
-      </div>
-    </section>
-
-    <section class="pricing-table">
-      <div class="column">
-        <h2>Vehicle Type</h2>
-        <div class="price-entry">
-          <img src="smallB.png" alt="Small Vehicle">
-          <p>Small Vehicle</p>
-        </div>
-        <div class="price-entry">
-          <img src="mediumB.png" alt="Medium Vehicle">
-          <p>Medium Vehicle</p>
-        </div>
-        <div class="price-entry">
-          <img src="largeB.png" alt="Large Vehicle">
-          <p>Large Vehicle</p>
-        </div>
-      </div>
-      <div class="column">
-        <h2>Basic Detail</h2>
-        <div class="price-text">
-          <p>$30</p>
-          <p>$40</p>
-          <p>$50</p>
-        </div>
-      </div>
-      <div class="column">
-        <h2>Full Detail</h2>
-        <div class="price-text">
-          <p>$150</p>
-          <p>$200</p>
-          <p>$250</p>
-        </div>
-      </div>
-    </section>
+<section class="pricing-table">
+  <div class="pricing-header">
+    <div>Vehicle Type</div>
+    <div>Basic Detail</div>
+    <div>Full Detail</div>
   </div>
+  <div class="pricing-row">
+    <div><img src="smallB.png" alt="Small Vehicle" /> Small Vehicle</div>
+    <div>$30</div>
+    <div>$150</div>
+  </div>
+  <div class="pricing-row">
+    <div><img src="mediumB.png" alt="Medium Vehicle" /> Medium Vehicle</div>
+    <div>$40</div>
+    <div>$200</div>
+  </div>
+  <div class="pricing-row">
+    <div><img src="largeB.png" alt="Large Vehicle" /> Large Vehicle</div>
+    <div>$50</div>
+    <div>$250</div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<style>
+  .pricing-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    margin: 2rem auto;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .pricing-header {
+    display: contents;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .pricing-row {
+    display: contents;
+    align-items: center;
+  }
+
+  .pricing-row div, .pricing-header div {
+    padding: 0.75rem 1rem;
+  }
+
+  .pricing-row img {
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+</style>
