@@ -72,7 +72,6 @@
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
       gap: 2rem;
-      align-items: center;
       font-size: 1.1rem;
       margin-top: 2rem;
     }
@@ -84,10 +83,14 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      min-height: 50px;
     }
     .price-row img {
       width: 45px;
+    }
+    .price-row span {
+      font-size: 1.05rem;
     }
     .cta-button {
       margin-top: 3rem;
@@ -169,16 +172,16 @@
 
       <div class="column">
         <h2>Basic Detail</h2>
-        <div class="price-row">$30</div>
-        <div class="price-row">$40</div>
-        <div class="price-row">$50</div>
+        <div class="price-row"><span>$30</span></div>
+        <div class="price-row"><span>$40</span></div>
+        <div class="price-row"><span>$50</span></div>
       </div>
 
       <div class="column">
         <h2>Full Detail</h2>
-        <div class="price-row">$150</div>
-        <div class="price-row">$200</div>
-        <div class="price-row">$250</div>
+        <div class="price-row"><span>$150</span></div>
+        <div class="price-row"><span>$200</span></div>
+        <div class="price-row"><span>$250</span></div>
       </div>
     </div>
 
@@ -189,17 +192,18 @@
     <div class="what-we-use">
       <h2>What We Use</h2>
       <ul>
-        <li>KochChemi Green star, All purpose cleaner</li>
-        <li>KochChemi Pol star, Leather cleaner</li>
-        <li>Glass Cleaner – Streak-Free Finish</li>
+        <li>KochChemi Green Star – All Purpose Cleaner</li>
+        <li>KochChemi Pol Star – Leather Cleaner</li>
+        <li>Streak-Free Glass Cleaner</li>
         <li>Odor Neutralizer Spray</li>
-        <li>Brushes, Swabs & Detailing Tools</li>
+        <li>Soft Brushes, Swabs & Interior Tools</li>
       </ul>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
+    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>
+    Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
   </footer>
 </body>
 </html>
