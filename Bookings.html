@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Detail - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking - NorthDrift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
@@ -58,14 +58,13 @@
     .nav-links a:hover {
       transform: scale(1.2);
     }
-
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 700px;
       margin: auto;
     }
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: #0d1b2a;
       margin-bottom: 1.5rem;
       text-align: center;
@@ -77,16 +76,19 @@
     }
     label {
       font-weight: 600;
-      margin-bottom: 0.25rem;
+      color: #0d1b2a;
     }
-    input, select {
-      padding: 0.7rem;
+    input, select, textarea {
+      padding: 0.75rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
     }
+    textarea::placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
     button {
-      margin-top: 1rem;
       padding: 0.9rem 1.5rem;
       background-color: #166534;
       color: white;
@@ -101,7 +103,6 @@
       transform: scale(1.1);
       background-color: #14532d;
     }
-
     footer {
       background: #0d1b2a;
       color: white;
@@ -114,48 +115,51 @@
   <div class="content">
     <header>
       <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo">
+        <img src="LOGO2.png" alt="NorthDrift Logo" />
         <p>Precision. Passion. Performance.</p>
         <p>Professional detailers located in Spokane, WA</p>
       </div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="#">Quotes</a>
+        <a href="Bookings.html">Quotes</a>
       </nav>
     </header>
 
     <section>
       <h1>Book a Detail</h1>
       <form>
-        <div>
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div>
-          <label for="service">Service</label>
-          <select id="service" name="service" required>
-            <option value="">-- Select a Service --</option>
-            <option value="interior">Interior Detailing</option>
-            <option value="exterior">Exterior Detailing</option>
-            <option value="paint">Paint Correction</option>
-            <option value="ceramic">Ceramic Coating</option>
-            <option value="headlight">Headlight Restoration</option>
-            <option value="oil">Oil Change</option>
-            <option value="brakes">Brake Change</option>
-          </select>
-        </div>
-        <div>
-          <label for="datetime">Preferred Date & Time</label>
-          <input type="datetime-local" id="datetime" name="datetime" required>
-        </div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="vehicle">Vehicle (Year, Make, Model)</label>
+        <input type="text" id="vehicle" name="vehicle" required />
+
+        <label for="address">Address Location</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option value="interior">Interior Detailing</option>
+          <option value="exterior">Exterior Detailing</option>
+          <option value="paint">Paint Correction</option>
+          <option value="ceramic">Ceramic Coating</option>
+          <option value="headlight">Headlight Restoration</option>
+          <option value="oil">Oil Change</option>
+          <option value="brake">Brake Change</option>
+        </select>
+
+        <label for="datetime">Preferred Date/Time</label>
+        <input type="datetime-local" id="datetime" name="datetime" required />
+
+        <label for="comments">Other Comments</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Excessive dirt, pet hair, etc."></textarea>
+
         <button type="submit">Submit Booking</button>
       </form>
     </section>
@@ -166,4 +170,3 @@
   </footer>
 </body>
 </html>
-
