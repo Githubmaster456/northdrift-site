@@ -7,10 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      flex: 1;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -72,31 +80,32 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-section">
-      <img src="LOGO2.png" alt="NorthDrift Logo">
-      <p>Precision. Passion. Performance.</p>
-      <p>Professional detailers located in Spokane, WA</p>
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#">Quotes</a>
-    </nav>
-  </header>
+  <div class="content">
+    <header>
+      <div class="logo-section">
+        <img src="LOGO2.png" alt="NorthDrift Logo">
+        <p>Precision. Passion. Performance.</p>
+        <p>Professional detailers located in Spokane, WA</p>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">Quotes</a>
+      </nav>
+    </header>
 
-  <section>
-    <h1>Interior</h1>
-    <p>
-      Our Interior Detailing service begins with a deep vacuuming of all upholstery and carpeted areas.
-      We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats.
-      Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
-    </p>
-  </section>
+    <section>
+      <h1>Interior</h1>
+      <p>
+        Our Interior Detailing service begins with a deep vacuuming of all upholstery and carpeted areas.
+        We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats.
+        Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
+      </p>
+    </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
