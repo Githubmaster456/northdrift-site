@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exterior Detailing - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers expert exterior detailing including paint correction." />
+  <title>Exterior Detail - NorthDrift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       display: flex;
       flex-direction: column;
     }
-    .content { flex: 1; }
     header {
       background: url('Background.png') no-repeat center center/cover;
       color: white;
@@ -59,32 +59,56 @@
       max-width: 1100px;
       margin: auto;
     }
-    .exterior-text h1 {
-      font-size: 2.2rem;
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
       color: #0d1b2a;
+    }
+    .intro-text {
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .price-table {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+    .column h2 {
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-    .exterior-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #333;
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 2rem;
+      min-height: 50px;
     }
-    .book-button a {
+    .price-row img {
+      width: 45px;
+    }
+    .price-row span {
+      font-size: 1.05rem;
+    }
+    .cta-button {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .cta-button a {
       display: inline-block;
-      padding: 0.9rem 1.5rem;
+      padding: 1rem 2rem;
       background-color: #166534;
       color: white;
       border: none;
       border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.2s ease;
       text-decoration: none;
     }
-    .book-button a:hover {
-      transform: scale(1.1);
+    .cta-button a:hover {
       background-color: #14532d;
     }
     footer {
@@ -92,38 +116,71 @@
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: auto;
+      font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <header>
-      <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo" />
-        <p>Precision. Passion. Performance.</p>
-        <p>Professional detailers located in Spokane, WA</p>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Bookings.html">Quotes</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo-section">
+      <img src="LOGO2.png" alt="NorthDrift Logo">
+      <p>Precision. Passion. Performance.</p>
+      <p>Professional detailers located in Spokane, WA</p>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Our Services</a>
+      <a href="Bookings.html">Quotes</a>
+    </nav>
+  </header>
 
-    <section class="exterior-text">
-      <h1>Exterior</h1>
+  <section>
+    <h1>Exterior Detail</h1>
+    <div class="intro-text">
       <p>
-        Our Exterior Detailing service includes a thorough hand wash and foam bath, followed by clay bar treatment to remove embedded contaminants. We meticulously clean your wheels, wheel wells, and tires, apply a protective wax or sealant, and polish any chrome or trim. Glass surfaces are cleaned for maximum clarity.
+        Our Exterior Detailing service includes a thorough hand wash and foam bath, followed by a clay bar treatment to remove embedded contaminants. We clean wheels, wheel wells, and tires meticulously. A premium wax or sealant is applied for protection and shine. We also polish all exterior chrome, trim, and glass to a spotless finish.
       </p>
-      <div class="book-button">
-        <a href="Bookings.html">Book Now</a>
+    </div>
+
+    <div class="price-table">
+      <div class="column">
+        <h2>Vehicle Type</h2>
+        <div class="price-row"><img src="smallB.png" alt="Small Vehicle"><span>Small Vehicle</span></div>
+        <div class="price-row"><img src="mediumB.png" alt="Medium Vehicle"><span>Medium Vehicle</span></div>
+        <div class="price-row"><img src="largeB.png" alt="Large Vehicle"><span>Large Vehicle</span></div>
       </div>
-    </section>
-  </div>
+
+      <div class="column">
+        <h2>Basic Detail</h2>
+        <div class="price-row"><span>$40</span></div>
+        <div class="price-row"><span>$60</span></div>
+        <div class="price-row"><span>$80</span></div>
+      </div>
+
+      <div class="column">
+        <h2>Full Detail</h2>
+        <div class="price-row"><span>$140</span></div>
+        <div class="price-row"><span>$180</span></div>
+        <div class="price-row"><span>$220</span></div>
+      </div>
+
+      <div class="column">
+        <h2>Paint Correction</h2>
+        <div class="price-row"><span>$250+</span></div>
+        <div class="price-row"><span>$300+</span></div>
+        <div class="price-row"><span>$350+</span></div>
+      </div>
+    </div>
+
+    <div class="cta-button">
+      <a href="Bookings.html">Book Now</a>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
+    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>
+    Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
   </footer>
 </body>
 </html>
-
