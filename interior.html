@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interior Detailing - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional interior and exterior detailing services with unmatched quality." />
+  <title>Interior Detail - NorthDrift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       display: flex;
       flex-direction: column;
-    }
-    .content {
-      flex: 1;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -63,70 +59,53 @@
       max-width: 1100px;
       margin: auto;
     }
+    h1, h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #0d1b2a;
+    }
     .intro-text {
       margin-bottom: 2rem;
     }
-    .intro-text h1 {
-      font-size: 2.4rem;
-      color: #0d1b2a;
-      margin-bottom: 1rem;
-    }
-    .intro-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .intro-text em {
-      display: block;
-      margin-top: 1rem;
-      font-style: italic;
-      color: #555;
-    }
-    .pricing-table {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    .price-table {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       gap: 2rem;
-      align-items: start;
     }
-    .pricing-table h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #0d1b2a;
-    }
-    .pricing-table .column {
+    .column {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      font-size: 1.1rem;
     }
-    .vehicle {
+    .column h2 {
+      font-size: 1.5rem;
+    }
+    .vehicle-row {
       display: flex;
       align-items: center;
       gap: 1rem;
-      font-size: 1.1rem;
     }
-    .vehicle img {
-      width: 50px;
-      height: auto;
+    .vehicle-row img {
+      width: 40px;
     }
-    .pricing-table .price {
-      font-size: 1.2rem;
+    .cta-button {
+      margin-top: 3rem;
+      text-align: center;
     }
-    .book-button {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .book-button a {
+    .cta-button a {
+      display: inline-block;
       padding: 1rem 2rem;
       background-color: #166534;
       color: white;
+      border: none;
+      border-radius: 8px;
       font-size: 1.2rem;
       font-weight: 600;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
     }
-    .book-button a:hover {
+    .cta-button a:hover {
       background-color: #14532d;
     }
     footer {
@@ -134,6 +113,7 @@
       color: white;
       text-align: center;
       padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -150,41 +130,45 @@
     </nav>
   </header>
 
-  <section class="intro-text">
+  <section>
     <h1>Interior Detail</h1>
-    <p>
-      Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal. Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas. We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats. We will make your interior look like the day it came off the lot. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
-    </p>
-    <em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em>
-  </section>
+    <div class="intro-text">
+      <p>
+        Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal. Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas. We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats. We will make your interior look like the day it came off the lot. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
+      </p>
+      <p><em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em></p>
+    </div>
 
-  <section class="pricing-table">
-    <div class="column">
-      <h3>Vehicle Type</h3>
-      <div class="vehicle"><img src="smallB.png" alt="Small Vehicle"> Small Vehicle</div>
-      <div class="vehicle"><img src="mediumB.png" alt="Medium Vehicle"> Medium Vehicle</div>
-      <div class="vehicle"><img src="largeB.png" alt="Large Vehicle"> Large Vehicle</div>
+    <div class="price-table">
+      <div class="column">
+        <h2>Vehicle Type</h2>
+        <div class="vehicle-row"><img src="smallB.png" alt="Small Vehicle"><span>Small Vehicle</span></div>
+        <div class="vehicle-row"><img src="mediumB.png" alt="Medium Vehicle"><span>Medium Vehicle</span></div>
+        <div class="vehicle-row"><img src="largeB.png" alt="Large Vehicle"><span>Large Vehicle</span></div>
+      </div>
+
+      <div class="column">
+        <h2>Basic Detail</h2>
+        <div>$30</div>
+        <div>$40</div>
+        <div>$50</div>
+      </div>
+
+      <div class="column">
+        <h2>Full Detail</h2>
+        <div>$150</div>
+        <div>$200</div>
+        <div>$250</div>
+      </div>
     </div>
-    <div class="column">
-      <h3>Basic Detail</h3>
-      <div class="price">$30</div>
-      <div class="price">$40</div>
-      <div class="price">$50</div>
-    </div>
-    <div class="column">
-      <h3>Full Detail</h3>
-      <div class="price">$150</div>
-      <div class="price">$200</div>
-      <div class="price">$250</div>
-    </div>
-    <div class="column book-button">
+
+    <div class="cta-button">
       <a href="Bookings.html">Book Now</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
+    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>Located in Spokane, WA | (509) 555-1234 | Licensed & Insured</p>
   </footer>
 </body>
 </html>
-
