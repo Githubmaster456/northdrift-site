@@ -63,58 +63,71 @@
       max-width: 1100px;
       margin: auto;
     }
-    .pricing-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 2rem;
-      max-width: 1100px;
-      margin: 2rem auto;
-      flex-wrap: wrap;
+    .intro-text {
+      margin-bottom: 2rem;
+    }
+    .intro-text h1 {
+      font-size: 2.4rem;
+      color: #0d1b2a;
+      margin-bottom: 1rem;
+    }
+    .intro-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .intro-text em {
+      display: block;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #555;
     }
     .pricing-table {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1rem;
-      flex: 2;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
     }
-    .pricing-header,
-    .pricing-row {
-      display: contents;
+    .pricing-table h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: #0d1b2a;
     }
-    .pricing-header div {
-      font-weight: bold;
-      font-size: 1.2rem;
-      padding: 0.75rem 1rem;
-    }
-    .pricing-row div {
-      padding: 0.75rem 1rem;
-    }
-    .pricing-row img {
-      width: 24px;
-      vertical-align: middle;
-      margin-right: 0.5rem;
-    }
-    .book-now-box {
-      flex: 1;
+    .pricing-table .column {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
     }
-    .book-now-btn {
+    .vehicle {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+    }
+    .vehicle img {
+      width: 50px;
+      height: auto;
+    }
+    .pricing-table .price {
+      font-size: 1.2rem;
+    }
+    .book-button {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .book-button a {
+      padding: 1rem 2rem;
       background-color: #166534;
       color: white;
-      padding: 1rem 2rem;
       font-size: 1.2rem;
       font-weight: 600;
-      border: none;
-      border-radius: 8px;
       text-decoration: none;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
     }
-    .book-now-btn:hover {
+    .book-button a:hover {
       background-color: #14532d;
-      transform: scale(1.05);
     }
     footer {
       background: #0d1b2a;
@@ -125,59 +138,53 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <header>
-      <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo" />
-        <p>Precision. Passion. Performance.</p>
-        <p>Professional detailers located in Spokane, WA</p>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Bookings.html">Quotes</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo-section">
+      <img src="LOGO2.png" alt="NorthDrift Logo">
+      <p>Precision. Passion. Performance.</p>
+      <p>Professional detailers located in Spokane, WA</p>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="Bookings.html">Quotes</a>
+    </nav>
+  </header>
 
-    <section>
-      <h1 style="font-size: 2.2rem; color: #0d1b2a; margin-bottom: 1rem;">Interior Detail</h1>
-      <p>
-        Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal. Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas. We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats. We will make your interior look like the day it came off the lot. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
-      </p>
-      <p><em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em></p>
-    </section>
+  <section class="intro-text">
+    <h1>Interior Detail</h1>
+    <p>
+      Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal. Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas. We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats. We will make your interior look like the day it came off the lot. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
+    </p>
+    <em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em>
+  </section>
 
-    <section class="pricing-wrapper">
-      <div class="pricing-table">
-        <div class="pricing-header">
-          <div>Vehicle Type</div>
-          <div>Basic Detail</div>
-          <div>Full Detail</div>
-        </div>
-        <div class="pricing-row">
-          <div><img src="smallB.png" alt="Small Vehicle" /> Small Vehicle</div>
-          <div>$30</div>
-          <div>$150</div>
-        </div>
-        <div class="pricing-row">
-          <div><img src="mediumB.png" alt="Medium Vehicle" /> Medium Vehicle</div>
-          <div>$40</div>
-          <div>$200</div>
-        </div>
-        <div class="pricing-row">
-          <div><img src="largeB.png" alt="Large Vehicle" /> Large Vehicle</div>
-          <div>$50</div>
-          <div>$250</div>
-        </div>
-      </div>
-
-      <div class="book-now-box">
-        <a href="Bookings.html" class="book-now-btn">Book Now</a>
-      </div>
-    </section>
-  </div>
+  <section class="pricing-table">
+    <div class="column">
+      <h3>Vehicle Type</h3>
+      <div class="vehicle"><img src="smallB.png" alt="Small Vehicle"> Small Vehicle</div>
+      <div class="vehicle"><img src="mediumB.png" alt="Medium Vehicle"> Medium Vehicle</div>
+      <div class="vehicle"><img src="largeB.png" alt="Large Vehicle"> Large Vehicle</div>
+    </div>
+    <div class="column">
+      <h3>Basic Detail</h3>
+      <div class="price">$30</div>
+      <div class="price">$40</div>
+      <div class="price">$50</div>
+    </div>
+    <div class="column">
+      <h3>Full Detail</h3>
+      <div class="price">$150</div>
+      <div class="price">$200</div>
+      <div class="price">$250</div>
+    </div>
+    <div class="column book-button">
+      <a href="Bookings.html">Book Now</a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
