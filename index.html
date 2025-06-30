@@ -7,13 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html, body {
+      height: 100%;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       display: flex;
       flex-direction: column;
+    }
+    .content {
+      flex: 1;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -53,16 +58,47 @@
     .nav-links a:hover {
       transform: scale(1.2);
     }
-    main {
+    .services-section {
       padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
+      width: 250px;
+    }
+    .service-card h3 {
+      color: #0d1b2a;
+      margin-bottom: 0.5rem;
+    }
+    .service-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #166534;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    .service-card a:hover {
+      transform: scale(1.05);
+      background-color: #14532d;
     }
     footer {
       background: #0d1b2a;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: auto;
     }
   </style>
 </head>
@@ -75,16 +111,24 @@
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="Interior.html">Interior</a>
-      <a href="Exterior.html">Exterior</a>
       <a href="Bookings.html">Quotes</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Welcome to NorthDrift Mobile Detailing</h1>
-    <p>Your vehicle's transformation starts here. Select a service above to learn more or book today!</p>
-  </main>
+  <section class="services-section">
+    <div class="service-card">
+      <h3>Interior Detailing</h3>
+      <a href="Interior.html">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Exterior Detailing</h3>
+      <a href="Exterior.html">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3><em>Ceramic Coating</em></h3>
+      <p><em>Coming Soon</em></p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
