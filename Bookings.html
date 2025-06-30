@@ -130,14 +130,14 @@
   </header>
 
   <section>
-    <form>
+    <form action="https://formsubmit.co/jcrissmann@outlook.com" method="POST">
       <h2>Book a Detail</h2>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="text" placeholder="Vehicle" required>
-      <input type="text" placeholder="Address Location" required>
-      <select required>
+      <input type="text" name="Name" placeholder="Name" required>
+      <input type="email" name="Email" placeholder="Email" required>
+      <input type="tel" name="Phone" placeholder="Phone Number" required>
+      <input type="text" name="Vehicle" placeholder="Vehicle" required>
+      <input type="text" name="Address" placeholder="Address Location" required>
+      <select name="Service" required>
         <option value="">Select a Service</option>
         <option value="Interior Detailing">Interior Detailing</option>
         <option value="Exterior Detailing">Exterior Detailing</option>
@@ -147,8 +147,12 @@
         <option value="Oil Changes">Oil Changes</option>
         <option value="Brake Changes">Brake Changes</option>
       </select>
-      <input type="datetime-local" required>
-      <textarea placeholder="Other comments (e.g., Excessive dirt, Pet hair, etc)"></textarea>
+      <input type="datetime-local" name="DateTime" required>
+      <textarea name="Comments" placeholder="Other comments (e.g., Excessive dirt, Pet hair, etc)"></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+      <input type="text" name="_honey" style="display:none">
       <button type="submit">Submit</button>
     </form>
 
