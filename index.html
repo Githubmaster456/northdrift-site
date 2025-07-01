@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional detailing services." />
+  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional interior and exterior detailing services with unmatched quality." />
   <title>NorthDrift Mobile Detailing</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -40,72 +40,63 @@
       font-weight: 600;
       color: white;
     }
-    nav.nav-links {
+    .nav-links {
       display: flex;
       gap: 2rem;
     }
-    nav.nav-links a {
+    .nav-links a {
       text-decoration: none;
       color: white;
       font-weight: 600;
       font-size: 1.2rem;
       transition: transform 0.2s ease;
     }
-    nav.nav-links a:hover {
+    .nav-links a:hover {
       transform: scale(1.2);
     }
     main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #0d1b2a;
-    }
-    .services-grid {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
       gap: 2rem;
     }
+    .services {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     .service-box {
-      flex: 1 1 45%;
-      background-color: white;
+      background: white;
+      border-radius: 10px;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
-      cursor: pointer;
-      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
     .service-box:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
     .service-box h3 {
       margin-top: 0.5rem;
-      font-size: 1.4rem;
-      color: #0d1b2a;
-    }
-    .service-box p {
-      margin-top: 0.25rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
     }
     .slideshow {
-      margin-top: 3rem;
-      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .slideshow h3 {
-      font-size: 1.6rem;
+    .slideshow h2 {
       margin-bottom: 1rem;
     }
     .slideshow img {
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
     footer {
       background: #0d1b2a;
@@ -113,8 +104,19 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      margin-top: auto;
     }
   </style>
+  <script>
+    let currentSlide = 0;
+    function switchSlide() {
+      const images = ["2025-toyota-gr-supra.png", "TG_DSC2207 1 copy.jpg"];
+      const img = document.getElementById("slideshow-img");
+      currentSlide = (currentSlide + 1) % images.length;
+      img.src = images[currentSlide];
+    }
+    setInterval(switchSlide, 3000);
+  </script>
 </head>
 <body>
   <header>
@@ -126,55 +128,43 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="#services">Our Services</a>
-      <a href="Bookings.html">Quotes</a>
+      <a href="Bookings.html">Get Quote</a>
     </nav>
   </header>
 
   <main>
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-box" onclick="location.href='interior.html'">
-          <h3>Interior Detail</h3>
-          <p>Deep clean your car's interior from carpets to console and leather.</p>
-        </div>
-        <div class="service-box" onclick="location.href='Exterior.html'">
-          <h3>Exterior Detail</h3>
-          <p>Hand wash, wax, clay bar treatment, and wheel cleaning.</p>
-        </div>
-        <div class="service-box" onclick="location.href='OilChange.html'">
-          <h3>Oil Change</h3>
-          <p>Fast and professional oil changes using premium products.</p>
-        </div>
-        <div class="service-box" onclick="location.href='BrakeChange.html'">
-          <h3>Brake Change</h3>
-          <p>Reliable brake pad and rotor replacement service at your location.</p>
-        </div>
-        <div class="service-box" onclick="location.href='HeadlightRestoration.html'">
-          <h3>Headlight Restoration</h3>
-          <p>Restore clarity to foggy headlights for safety and aesthetics.</p>
-        </div>
+    <div class="services" id="services">
+      <div class="service-box">
+        <h3><a href="interior.html">Interior Detail</a></h3>
+        <p>Deep clean your car's interior from carpets to console and leather.</p>
       </div>
-    </section>
+      <div class="service-box">
+        <h3><a href="Exterior.html">Exterior Detail</a></h3>
+        <p>Hand wash, wax, clay bar treatment, and wheel cleaning.</p>
+      </div>
+      <div class="service-box">
+        <h3><a href="#">Oil Change</a></h3>
+        <p>Fast and professional oil changes using premium products.</p>
+      </div>
+      <div class="service-box">
+        <h3><a href="#">Brake Change</a></h3>
+        <p>Reliable brake pad and rotor replacement service at your location.</p>
+      </div>
+      <div class="service-box">
+        <h3><a href="#">Headlight Restoration</a></h3>
+        <p>Restore clarity to foggy headlights for safety and aesthetics.</p>
+      </div>
+    </div>
 
-    <section class="slideshow">
-      <h3>Our Work</h3>
-      <img src="2025-toyota-gr-supra.png" alt="Detail Example" id="slide-image">
-    </section>
+    <div class="slideshow">
+      <h2>Our Work</h2>
+      <img id="slideshow-img" src="2025-toyota-gr-supra.png" alt="Slideshow image" />
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
+    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>
+    Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
   </footer>
-
-  <script>
-    const images = ['2025-toyota-gr-supra.png', 'TG_DSC2207 1 copy.jpg'];
-    let index = 0;
-    const slide = document.getElementById('slide-image');
-    setInterval(() => {
-      index = (index + 1) % images.length;
-      slide.src = images[index];
-    }, 4000);
-  </script>
 </body>
 </html>
