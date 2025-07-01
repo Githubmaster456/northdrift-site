@@ -1,19 +1,20 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional detailing services including interior, exterior, oil changes, and brake services." />
   <title>NorthDrift Mobile Detailing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -53,122 +54,101 @@
     .nav-links a:hover {
       transform: scale(1.2);
     }
-    section {
+    .intro-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #ffffff;
+    }
+    .intro-section h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: #0d1b2a;
+      margin-bottom: 1rem;
+    }
+    .intro-section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .services-section {
       padding: 2rem;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
-    .about-us {
-      margin-top: 2rem;
-    }
-    .about-us h2, .services h2 {
-      color: #0d1b2a;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-    }
-    .about-us p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .services-contact-wrapper {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
-    .services {
-      flex: 1;
-      min-width: 300px;
+    .service-item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-    .services ul {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
+    .service-item:hover {
+      transform: scale(1.05);
     }
-    .services ul li {
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease, color 0.2s ease;
-    }
-    .services ul li:hover {
-      transform: scale(1.1);
-      color: #0077cc;
-    }
-    .contact {
-      flex: 1;
-      min-width: 300px;
-    }
-    .contact h2 {
+    .service-item a {
+      text-decoration: none;
       color: #0d1b2a;
-      margin-bottom: 1.5rem;
-      font-size: 1.75rem;
-    }
-    .contact p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: block;
     }
     footer {
       background: #0d1b2a;
       color: white;
       text-align: center;
       padding: 1rem;
-      margin-top: auto;
+      font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
-<body id="top">
+<body>
   <header>
     <div class="logo-section">
-      <img src="LOGO2.png" alt="NorthDrift Logo" />
+      <img src="LOGO2.png" alt="NorthDrift Logo">
       <p>Precision. Passion. Performance.</p>
       <p>Professional detailers located in Spokane, WA</p>
     </div>
     <nav class="nav-links">
-      <a href="#top">Home</a>
+      <a href="index.html">Home</a>
       <a href="#services">Our Services</a>
+      <a href="#about">About Us</a>
       <a href="Bookings.html">Quotes</a>
     </nav>
   </header>
 
-  <div class="content">
-    <section class="about-us">
-      <h2>About Us</h2>
-      <p>At NorthDrift Mobile Detailing, we believe every vehicle deserves premium care. Our experienced team takes pride in restoring and preserving your vehicle's appearance with meticulous attention to detail. Whether it’s a full detail or a focused service, our commitment to quality and customer satisfaction drives everything we do.</p>
-    </section>
+  <section class="intro-section" id="about">
+    <h1>Welcome to NorthDrift Mobile Detailing</h1>
+    <p>NorthDrift offers top-tier mobile detailing services in Spokane, WA — specializing in interior and exterior detailing, oil changes, and brake maintenance. Experience unmatched precision and performance with our fully mobile services.</p>
+  </section>
 
-    <section id="services" class="services-contact-wrapper">
-      <div class="services">
-        <h2>Our Services</h2>
-        <ul>
-          <li><a href="interior.html" style="text-decoration: none; color: inherit;">Interior Detailing</a></li>
-          <li><a href="Exterior.html" style="text-decoration: none; color: inherit;">Exterior Detailing</a></li>
-          <li>Paint Correction</li>
-          <li>Ceramic Coating <em>(coming soon)</em></li>
-          <li>Headlight Restoration</li>
-          <li>Oil Changes</li>
-          <li>Brake Changes</li>
-          <p><em>Mobile Service at Your Location</em></p>
-        </ul>
+  <section class="services-section" id="services">
+    <h2 style="text-align:center; font-family: 'Montserrat', sans-serif; font-size: 2rem; color: #0d1b2a;">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <a href="interior.html">Interior Detailing</a>
       </div>
-
-      <div class="contact">
-        <h2>Our Craftsmanship</h2>
-        <p>We don’t just clean cars — we transform them. Using industry-grade tools and premium products, we go beyond the surface to give your vehicle a showroom-worthy finish. Attention to detail is our promise. Let us bring back that new car feel.</p>
+      <div class="service-item">
+        <a href="Exterior.html">Exterior Detailing</a>
       </div>
-    </section>
-
-    <section>
-      <h2 style="color: #0d1b2a; font-size: 2rem; text-align: center; margin-bottom: 1.5rem;">Our Work</h2>
-      <p style="text-align: center; font-size: 1.1rem; color: #555;">Stay tuned for a showcase of our finest detailing jobs, transformations, and satisfied clients. Images coming soon.</p>
-    </section>
-  </div>
+      <div class="service-item">
+        <a href="OilChange.html">Oil Change</a>
+      </div>
+      <div class="service-item">
+        <a href="BrakeChange.html">Brake Change</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.</p>
+    <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
   </footer>
 </body>
 </html>
