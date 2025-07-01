@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NorthDrift Mobile Detailing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
     }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
     header {
       background: url('Background.png') no-repeat center center/cover;
       color: white;
@@ -21,25 +28,30 @@
       align-items: center;
       flex-wrap: wrap;
     }
+
     .logo-section {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
+
     .logo-section img {
       max-width: 180px;
       height: auto;
       margin-bottom: 0.25rem;
     }
+
     .logo-section p {
       font-size: 1rem;
       font-weight: 600;
       color: white;
     }
+
     .nav-links {
       display: flex;
       gap: 2rem;
     }
+
     .nav-links a {
       text-decoration: none;
       color: white;
@@ -47,25 +59,9 @@
       font-size: 1.1rem;
       transition: transform 0.2s ease;
     }
+
     .nav-links a:hover {
       transform: scale(1.2);
-    }
-
-    .intro-text {
-      text-align: center;
-      margin: 2rem auto 0;
-      padding: 0 1rem;
-      max-width: 800px;
-    }
-    .intro-text h1 {
-      font-size: 2.2rem;
-      color: #0d1b2a;
-      font-family: 'Montserrat', sans-serif;
-      margin-bottom: 0.5rem;
-    }
-    .intro-text p {
-      font-size: 1.1rem;
-      color: #333;
     }
 
     .services-container {
@@ -75,11 +71,13 @@
       padding: 3rem 1rem;
       gap: 4rem;
     }
+
     .services-section {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
+
     .service-card {
       background: white;
       padding: 1.2rem 1.5rem;
@@ -89,27 +87,33 @@
       transition: transform 0.2s ease;
       cursor: pointer;
     }
+
     .service-card:hover {
       transform: scale(1.03);
     }
+
     .service-card h3 {
       font-size: 1.1rem;
       color: #000;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
+
     .service-card p {
       font-size: 0.95rem;
       color: #333;
     }
+
     .slideshow-container {
       max-width: 420px;
     }
+
     .slideshow-container img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       background: #0d1b2a;
       color: white;
@@ -132,13 +136,6 @@
       <a href="Bookings.html">Get Quote</a>
     </nav>
   </header>
-
-  <section>
-    <div class="intro-text">
-      <h1>Welcome to NorthDrift Mobile Detailing</h1>
-      <p>We bring top-tier automotive detailing directly to your doorstep. Serving Spokane, WA with passion, precision, and professionalism. Explore our services below.</p>
-    </div>
-  </section>
 
   <div class="services-container" id="services">
     <div class="services-section">
