@@ -3,29 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers a variety of mobile car care services including detailing, oil changes, and more." />
   <title>NorthDrift Mobile Detailing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html, body {
-      height: 100%;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
-      color: #0d1b2a;
-      display: flex;
-      flex-direction: column;
+      color: #333;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
       color: white;
-      padding: 2.5rem 2rem;
+      padding: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -38,8 +28,6 @@
     }
     .logo-section img {
       max-width: 180px;
-      height: auto;
-      margin-bottom: 0.25rem;
     }
     .logo-section p {
       font-size: 1rem;
@@ -48,47 +36,71 @@
     }
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
     }
     .nav-links a {
       text-decoration: none;
       color: white;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: transform 0.2s ease;
     }
     .nav-links a:hover {
       transform: scale(1.2);
     }
-    section {
-      max-width: 900px;
-      margin: 3rem auto;
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
       padding: 1rem;
+      display: flex;
+      gap: 2rem;
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+    .services {
+      flex: 1;
     }
-    .service {
-      background-color: white;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
+    .services h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    .service:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .service-list a {
+      display: block;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      color: #0d1b2a;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: transform 0.2s;
     }
-    .service h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+    .service-list a:hover {
+      transform: scale(1.05);
     }
-    .service p {
-      font-size: 1.05rem;
+    .our-work {
+      flex: 1;
+    }
+    .our-work h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 200%;
+      animation: slide 10s infinite;
+    }
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
     }
     footer {
       background: #0d1b2a;
@@ -96,6 +108,7 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      margin-top: 4rem;
     }
   </style>
 </head>
@@ -107,40 +120,33 @@
       <p>Professional detailers located in Spokane, WA</p>
     </div>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
       <a href="#services">Our Services</a>
       <a href="Bookings.html">Get Quote</a>
     </nav>
   </header>
 
-  <section id="services">
-    <h2>Our Services</h2>
+  <main>
+    <section class="services">
+      <h2 id="services">Our Services</h2>
+      <div class="service-list">
+        <a href="interior.html">Interior Detail</a>
+        <a href="Exterior.html">Exterior Detail</a>
+        <a href="">Oil Change</a>
+        <a href="">Brake Change</a>
+        <a href="">Headlight Restoration</a>
+      </div>
+    </section>
 
-    <div class="service" onclick="location.href='interior.html'">
-      <h3>Interior Detail</h3>
-      <p>Deep clean your car's interior from carpets to console and leather.</p>
-    </div>
-
-    <div class="service" onclick="location.href='Exterior.html'">
-      <h3>Exterior Detail</h3>
-      <p>Hand wash, wax, clay bar treatment, and wheel cleaning.</p>
-    </div>
-
-    <div class="service" onclick="location.href='OilChange.html'">
-      <h3>Oil Change</h3>
-      <p>Fast and professional oil changes using premium products.</p>
-    </div>
-
-    <div class="service" onclick="location.href='BrakeChange.html'">
-      <h3>Brake Change</h3>
-      <p>Reliable brake pad and rotor replacement service at your location.</p>
-    </div>
-
-    <div class="service" onclick="location.href='HeadlightRestoration.html'">
-      <h3>Headlight Restoration</h3>
-      <p>Restore clarity to foggy headlights for safety and aesthetics.</p>
-    </div>
-  </section>
+    <section class="our-work">
+      <h2>Our Work</h2>
+      <div class="slideshow-container">
+        <div class="slides">
+          <img src="2025-toyota-gr-supra.png" alt="Detail Job 1">
+          <img src="TG_DSC2207 1 copy.jpg" alt="Detail Job 2">
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>
