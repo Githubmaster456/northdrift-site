@@ -1,24 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Interior Detailing - NorthDrift</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NorthDrift Mobile Detailing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      height: 100%;
-    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f4f4f4;
       color: #333;
       display: flex;
       flex-direction: column;
-    }
-    .content {
-      flex: 1;
+      min-height: 100vh;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -63,170 +58,112 @@
       max-width: 1100px;
       margin: auto;
     }
-    .interior-section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
+    .about-us {
+      margin-top: 2rem;
     }
-    .interior-text {
-      flex: 1;
-      min-width: 250px;
-    }
-    .interior-text h1 {
-      font-size: 2.2rem;
+    .about-us h2, .services h2 {
       color: #0d1b2a;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
     }
-    .interior-text p {
+    .about-us p {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #333;
     }
-    .book-button {
-      min-width: 200px;
-    }
-    .book-button a {
-      display: inline-block;
-      padding: 0.9rem 1.5rem;
-      background-color: #166534;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-      text-decoration: none;
-      text-align: center;
-    }
-    .book-button a:hover {
-      transform: scale(1.1);
-      background-color: #14532d;
-    }
-    .pricing-section {
+    .services-contact-wrapper {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 2rem;
+      margin-top: 2rem;
     }
-    .detail-column {
+    .services {
       flex: 1;
       min-width: 300px;
     }
-    .detail-column h2 {
+    .services ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .services ul li {
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .services ul li:hover {
+      transform: scale(1.1);
+      color: #0077cc;
+    }
+    .contact {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact h2 {
       color: #0d1b2a;
       margin-bottom: 1.5rem;
-      font-size: 1.8rem;
+      font-size: 1.75rem;
     }
-    .vehicle-category {
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: flex-start;
-    }
-    .vehicle-category img {
-      max-width: 100px;
-      margin-right: 1rem;
-    }
-    .vehicle-category h3 {
-      color: #0d1b2a;
-      margin: 0;
-    }
-    .vehicle-category p {
-      margin-top: 0.25rem;
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
     footer {
       background: #0d1b2a;
       color: white;
       text-align: center;
       padding: 1rem;
+      margin-top: auto;
     }
   </style>
 </head>
-<body>
-  <div class="content">
-    <header>
-      <div class="logo-section">
-        <img src="LOGO2.png" alt="NorthDrift Logo" />
-        <p>Precision. Passion. Performance.</p>
-        <p>Professional detailers located in Spokane, WA</p>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Bookings.html">Quotes</a>
-      </nav>
-    </header>
+<body id="top">
+  <header>
+    <div class="logo-section">
+      <img src="LOGO2.png" alt="NorthDrift Logo" />
+      <p>Precision. Passion. Performance.</p>
+      <p>Professional detailers located in Spokane, WA</p>
+    </div>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#services">Our Services</a>
+      <a href="Bookings.html">Quotes</a>
+    </nav>
+  </header>
 
-    <section class="interior-section">
-      <div class="interior-text">
-        <h1>Interior</h1>
-        <p>
-          Our Interior Detailing service offers two packages depending on your needs: A light detail including, Quick vacuuming of carpets and seats. Wipe-down of dash, console, door panels. Light cleaning of windows. No shampooing or deep stain removal, Our Extreme detail service begins with a deep vacuuming of all upholstery and carpeted areas.
-          We steam clean floor mats, wipe down every surface including dashboard, vents, and door panels, and shampoo fabric seats, we will make your look like the day it came off the lot. 
-          Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free.
-        </p>
-        <p><em>Please note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to the extra time and attention required. We’ll always do our best to provide an accurate estimate before beginning service.</em></p>
+  <div class="content">
+    <section class="about-us">
+      <h2>About Us</h2>
+      <p>At NorthDrift Mobile Detailing, we believe every vehicle deserves premium care. Our experienced team takes pride in restoring and preserving your vehicle's appearance with meticulous attention to detail. Whether it’s a full detail or a focused service, our commitment to quality and customer satisfaction drives everything we do.</p>
+    </section>
+
+    <section id="services" class="services-contact-wrapper">
+      <div class="services">
+        <h2>Our Services</h2>
+        <ul>
+          <li><a href="interior.html" style="text-decoration: none; color: inherit;">Interior Detailing</a></li>
+          <li><a href="Exterior.html" style="text-decoration: none; color: inherit;">Exterior Detailing</a></li>
+          <li>Paint Correction</li>
+          <li>Ceramic Coating <em>(coming soon)</em></li>
+          <li>Headlight Restoration</li>
+          <li>Oil Changes</li>
+          <li>Brake Changes</li>
+          <p><em>Mobile Service at Your Location</em></p>
+        </ul>
       </div>
-      <div class="book-button">
-        <a href="Bookings.html">Book Now</a>
+
+      <div class="contact">
+        <h2>Our Craftsmanship</h2>
+        <p>We don’t just clean cars — we transform them. Using industry-grade tools and premium products, we go beyond the surface to give your vehicle a showroom-worthy finish. Attention to detail is our promise. Let us bring back that new car feel.</p>
       </div>
     </section>
 
-    <section class="pricing-section">
-      <div class="detail-column">
-        <h2>Light Detail</h2>
-        <div class="vehicle-category">
-          <img src="smallB.png" alt="Small Vehicle">
-          <div>
-            <h3>Small Vehicle - $30</h3>
-            <p>Small vehicles typically include compact and subcompact cars such as the Honda Civic, Toyota Corolla, Ford Fiesta, Hyundai Elantra, and Volkswagen Golf. Most small cars take about 20-30 minutes to complete a full interior detail.</p>
-          </div>
-        </div>
-
-        <div class="vehicle-category">
-          <img src="mediumB.png" alt="Medium Vehicle">
-          <div>
-            <h3>Medium Vehicle - $40</h3>
-            <p> Medium vehicles generally include larger sedans, small SUVs, and crossovers such as the Toyota Camry, Honda Accord, Mazda CX-5, Ford Escape, and Subaru Outback. Interior detailing for these vehicles usually takes between 30-40 minutes.</p>
-          </div>
-        </div>
-
-        <div class="vehicle-category">
-          <img src="largeB.png" alt="Large Vehicle">
-          <div>
-            <h3>Large Vehicle - $50</h3>
-            <p>Large vehicles include full-size SUVs, trucks, and minivans such as the Ford F-150, Chevrolet Tahoe, Toyota Sienna, GMC Yukon, and Honda Pilot. 40-50 minutes </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="detail-column">
-        <h2>Extreme Detail</h2>
-        <div class="vehicle-category">
-          <img src="smallB.png" alt="Small Vehicle">
-          <div>
-            <h3>Small Vehicle - $150</h3>
-            <p>Small vehicles typically include compact and subcompact cars such as the Honda Civic, Toyota Corolla, Ford Fiesta, Hyundai Elantra, and Volkswagen Golf. Most small cars take about 2 to 3 hours to complete a full interior detail.</p>
-          </div>
-        </div>
-
-        <div class="vehicle-category">
-          <img src="mediumB.png" alt="Medium Vehicle">
-          <div>
-            <h3>Medium Vehicle - $200</h3>
-            <p>Medium vehicles generally include larger sedans, small SUVs, and crossovers such as the Toyota Camry, Honda Accord, Mazda CX-5, Ford Escape, and Subaru Outback. Interior detailing for these vehicles usually takes between 3 to 4.5 hours.</p>
-          </div>
-        </div>
-
-        <div class="vehicle-category">
-          <img src="largeB.png" alt="Large Vehicle">
-          <div>
-            <h3>Large Vehicle - $250</h3>
-            <p>Large vehicles include full-size SUVs, trucks, and minivans such as the Ford F-150, Chevrolet Tahoe, Toyota Sienna, GMC Yukon, and Honda Pilot. Expect 4 to 6+ hours for a full interior detail.</p>
-          </div>
-        </div>
-      </div>
+    <section>
+      <h2 style="color: #0d1b2a; font-size: 2rem; text-align: center; margin-bottom: 1.5rem;">Our Work</h2>
+      <p style="text-align: center; font-size: 1.1rem; color: #555;">Stay tuned for a showcase of our finest detailing jobs, transformations, and satisfied clients. Images coming soon.</p>
     </section>
   </div>
 
