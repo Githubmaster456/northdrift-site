@@ -3,19 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional interior and exterior detailing services with unmatched quality." />
-  <title>Interior Detail - NorthDrift</title>
+  <title>NorthDrift Mobile Detailing</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html, body { height: 100%; scroll-behavior: smooth; }
 
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
-      display: flex;
-      flex-direction: column;
     }
 
     h1, h2, h3, h4 {
@@ -52,14 +49,14 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
     }
 
     .nav-links a {
       text-decoration: none;
       color: white;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       transition: transform 0.2s ease;
     }
 
@@ -67,63 +64,97 @@
       transform: scale(1.2);
     }
 
-    section {
-      padding: 2rem;
-      max-width: 95%;
+    /* Hero Welcome Section */
+    .hero {
+      background: url('Background.png') center center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .scroll-down:hover {
+      color: white;
+    }
+
+    .about-section {
+      padding: 4rem 2rem 2rem;
+      max-width: 800px;
       margin: auto;
-    }
-
-    .price-table {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr;
-      gap: 2rem;
-      font-size: 1.1rem;
-      margin-top: 3rem;
-    }
-
-    .column h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .price-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      min-height: 50px;
-    }
-
-    .price-row img {
-      width: 45px;
-    }
-
-    .price-row span {
-      font-size: 1.05rem;
-    }
-
-    .cta-button {
-      margin-top: 3rem;
       text-align: center;
     }
 
-    .cta-button a {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #166534;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.2s ease-in-out;
+    .about-section h2 {
+      font-size: 2rem;
+      color: #0d1b2a;
+      margin-bottom: 1rem;
     }
 
-    .cta-button a:hover {
-      background-color: #14532d;
-      transform: scale(1.05);
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .services-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1rem;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .services-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      max-width: 360px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: scale(1.03);
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      color: #000;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .slideshow-container {
+      max-width: 420px;
+    }
+
+    .slideshow-container img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     footer {
@@ -132,28 +163,6 @@
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      .price-table {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .logo-section {
-        align-items: center;
-      }
     }
   </style>
 </head>
@@ -166,92 +175,72 @@
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="index.html#services">Our Services</a>
-      <a href="Bookings.html">Quotes</a>
+      <a href="#services">Our Services</a>
+      <a href="Bookings.html">Get Quote</a>
     </nav>
   </header>
 
-  <section>
-    <!-- Bounded-width banner layout -->
-    <div style="background-color: #0d1b2a; border-radius: 8px; overflow: hidden; color: white; margin: 0 auto; padding: 2rem; max-width: 1100px;">
-      <div style="display: flex; flex-wrap: wrap;">
-        <div style="flex: 1 1 300px; padding: 1rem 2rem;">
-          <h2 style="font-size: 2rem;">Our Interior Packages</h2>
-        </div>
-        <div style="flex: 2 1 400px; background-color: #1e293b; padding: 1.5rem 2rem; border-radius: 0.5rem;">
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Basic Package</h3>
-          <p style="line-height: 1.6; font-size: 1.05rem;">
-            Quick vacuuming of carpets and seats, wipe-down of dash, console, door panels, and light cleaning of windows. This is ideal for regular upkeep or quick refreshes. No shampooing or deep stain removal.
-          </p>
-          <h3 style="font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Full Package</h3>
-          <p style="line-height: 1.6; font-size: 1.05rem;">
-            Deep vacuuming of the entire car, soap and scrub mats, thorough wipe-down of dashboard, vents, door panels, shampooed fabric seats and carpets shampooed and extracted. Leather is gently cleaned and conditioned, and all glass surfaces are polished streak-free. Not a single spot on the car missed
-            if there is contact us and we will come back and fix it for free!!
-          </p>
-          <p style="font-size: 0.95rem; margin-top: 1rem; font-style: italic; color: #cbd5e1;">
-            Note: Vehicles with excessive pet hair or heavy soil may incur an additional $50 charge due to time required. We’ll provide an accurate estimate before service.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pricing table with durations -->
-    <div class="price-table">
-      <div class="column">
-        <h2>Vehicle Type</h2>
-        <div class="price-row"><img src="smallB.png" alt="Small Vehicle"><span>Small Vehicle</span></div>
-        <div class="price-row"><img src="mediumB.png" alt="Medium Vehicle"><span>Medium Vehicle</span></div>
-        <div class="price-row"><img src="largeB.png" alt="Large Vehicle"><span>Large Vehicle</span></div>
-      </div>
-
-      <div class="column">
-        <h2>Basic Detail</h2>
-        <div class="price-row">
-          <span>$30 <span style="font-size: 0.9rem; color: #666;">(20–30 min)</span></span>
-        </div>
-        <div class="price-row">
-          <span>$40 <span style="font-size: 0.9rem; color: #666;">(30–40 min)</span></span>
-        </div>
-        <div class="price-row">
-          <span>$50 <span style="font-size: 0.9rem; color: #666;">(40–50 min)</span></span>
-        </div>
-      </div>
-
-      <div class="column">
-        <h2>Full Detail</h2>
-        <div class="price-row">
-          <span>$150 <span style="font-size: 0.9rem; color: #666;">(1–2 hrs)</span></span>
-        </div>
-        <div class="price-row">
-          <span>$200 <span style="font-size: 0.9rem; color: #666;">(2–3 hrs)</span></span>
-        </div>
-        <div class="price-row">
-          <span>$250 <span style="font-size: 0.9rem; color: #666;">(3–4 hrs)</span></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Book Now Button -->
-    <div class="cta-button">
-      <a href="Bookings.html">Book Now</a>
-    </div>
-
-    <!-- What We Use -->
-    <div style="margin-top: 4rem;">
-      <h2 style="font-size: 1.6rem; color: #0d1b2a; margin-bottom: 1rem;">What We Use</h2>
-      <ul style="list-style: disc; padding-left: 1.5rem; line-height: 1.8; font-size: 1.05rem;">
-        <li>KochChemi Green Star – All Purpose Cleaner</li>
-        <li>KochChemi Pol Star – Leather Cleaner</li>
-        <li>Streak-Free Glass Cleaner</li>
-        <li>Odor Neutralizer Spray</li>
-        <li>Soft Brushes, Swabs & Interior Tools</li>
-      </ul>
-    </div>
+  <section class="hero">
+    <h1>Welcome to NorthDrift</h1>
+    <a href="#about" class="scroll-down">▼ Scroll to Learn More</a>
   </section>
+
+  <section id="about" class="about-section">
+    <h2>About NorthDrift</h2>
+    <p>
+      NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of
+      precision, attention to detail, and care right to your driveway. From quick maintenance to full
+      transformations, our team delivers both interior and exterior services using premium products and
+      techniques. Trust us to protect your investment while making your car shine like new.
+    </p>
+  </section>
+
+  <div class="services-container" id="services">
+    <div class="services-section">
+      <div class="service-card" onclick="location.href='interior.html'">
+        <h3>Interior Detail</h3>
+        <p>Deep clean your car's interior from carpets to console and leather.</p>
+      </div>
+      <div class="service-card" onclick="location.href='Exterior.html'">
+        <h3>Exterior Detail</h3>
+        <p>Hand wash, wax, clay bar treatment, and wheel cleaning.</p>
+      </div>
+      <div class="service-card" onclick="location.href='oil.html'">
+        <h3>Oil Change</h3>
+        <p>Fast and professional oil changes using premium products.</p>
+      </div>
+      <div class="service-card" onclick="location.href='brakes.html'">
+        <h3>Brake Change</h3>
+        <p>Reliable brake pad and rotor replacement service at your location.</p>
+      </div>
+      <div class="service-card" onclick="location.href='headlights.html'">
+        <h3>Headlight Restoration</h3>
+        <p>Restore clarity to foggy headlights for safety and aesthetics.</p>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Our Work</h2>
+      <img src="2025-toyota-gr-supra.png" alt="Work 1" id="slideshow-image">
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2025 NorthDrift Mobile Detailing. All rights reserved.<br>
     Located in Spokane, WA | (509) 867-6497 | Licensed & Insured</p>
   </footer>
+
+  <script>
+    const images = [
+      '2025-toyota-gr-supra.png',
+      'TG_DSC2207 1 copy.jpg'
+    ];
+    let current = 0;
+    const imgElement = document.getElementById('slideshow-image');
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      imgElement.src = images[current];
+    }, 3000);
+  </script>
 </body>
 </html>
