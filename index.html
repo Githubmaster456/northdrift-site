@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
+    html, body { height: 100%; scroll-behavior: smooth; }
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -15,7 +15,7 @@
       color: #333;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4 {
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -64,33 +64,55 @@
       transform: scale(1.2);
     }
 
+    /* Hero Welcome Section */
+    .hero {
+      background: url('Background.png') center center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .scroll-down:hover {
+      color: white;
+    }
+
+    .about-section {
+      padding: 4rem 2rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      color: #0d1b2a;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
     .services-container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       padding: 3rem 1rem;
-      gap: 3rem;
+      gap: 4rem;
       flex-wrap: wrap;
-    }
-
-    .welcome-section {
-      max-width: 360px;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .welcome-section h2 {
-      font-size: 1.5rem;
-      color: #0d1b2a;
-      margin-bottom: 1rem;
-    }
-
-    .welcome-section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
     }
 
     .services-section {
@@ -142,17 +164,6 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-
-    @media (max-width: 1024px) {
-      .services-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .welcome-section {
-        margin-bottom: 2rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -169,16 +180,22 @@
     </nav>
   </header>
 
-  <div class="services-container" id="services">
-    <div class="welcome-section">
-      <h2>Welcome to NorthDrift</h2>
-      <p>
-        At NorthDrift, we bring precision and passion to every detail.
-        Whether it’s restoring your vehicle’s shine or keeping it running smooth,
-        we provide high-quality mobile services directly to you. Explore our offerings below.
-      </p>
-    </div>
+  <section class="hero">
+    <h1>Welcome to NorthDrift</h1>
+    <a href="#about" class="scroll-down">▼ Scroll to Learn More</a>
+  </section>
 
+  <section id="about" class="about-section">
+    <h2>About NorthDrift</h2>
+    <p>
+      NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of
+      precision, attention to detail, and care right to your driveway. From quick maintenance to full
+      transformations, our team delivers both interior and exterior services using premium products and
+      techniques. Trust us to protect your investment while making your car shine like new.
+    </p>
+  </section>
+
+  <div class="services-container" id="services">
     <div class="services-section">
       <div class="service-card" onclick="location.href='interior.html'">
         <h3>Interior Detail</h3>
