@@ -7,18 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; scroll-behavior: smooth; }
-
+    html, body { height: 100%; }
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f4f4f4;
       color: #333;
     }
-
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5, h6 {
       font-family: 'Montserrat', sans-serif;
     }
-
     header {
       background: url('Background.png') no-repeat center center/cover;
       color: white;
@@ -28,30 +25,25 @@
       align-items: center;
       flex-wrap: wrap;
     }
-
     .logo-section {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
-
     .logo-section img {
       max-width: 180px;
       height: auto;
       margin-bottom: 0.25rem;
     }
-
     .logo-section p {
       font-size: 1rem;
       font-weight: 600;
       color: white;
     }
-
     .nav-links {
       display: flex;
       gap: 2rem;
     }
-
     .nav-links a {
       text-decoration: none;
       color: white;
@@ -59,74 +51,67 @@
       font-size: 1.1rem;
       transition: transform 0.2s ease;
     }
-
     .nav-links a:hover {
       transform: scale(1.2);
     }
-
-    .about-section {
-      padding: 4rem 2rem 2rem;
-      max-width: 1100px;
-      margin: auto;
+    .hero {
+      background: url('Background.png') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem 3rem;
     }
-
-    .about-grid {
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    .about-section {
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: auto;
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      align-items: center;
+      align-items: flex-start;
     }
-
     .about-text {
-      flex: 1 1 300px;
+      flex: 2;
     }
-
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0d1b2a;
+    }
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
     .about-images {
-      flex: 1 1 300px;
+      flex: 1;
       display: flex;
       flex-direction: column;
       gap: 1rem;
     }
-
     .about-images img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .offer-section {
-      background-color: #0d1b2a;
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    .offer-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .offer-section p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
     .services-container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       padding: 3rem 1rem;
       gap: 4rem;
-      flex-wrap: wrap;
     }
-
     .services-section {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
     }
-
     .service-card {
       background: white;
       padding: 1.2rem 1.5rem;
@@ -136,33 +121,27 @@
       transition: transform 0.2s ease;
       cursor: pointer;
     }
-
     .service-card:hover {
       transform: scale(1.03);
     }
-
     .service-card h3 {
       font-size: 1.1rem;
       color: #000;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
-
     .service-card p {
       font-size: 0.95rem;
       color: #333;
     }
-
     .slideshow-container {
       max-width: 420px;
     }
-
     .slideshow-container img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
-
     footer {
       background: #0d1b2a;
       color: white;
@@ -186,25 +165,20 @@
     </nav>
   </header>
 
-  <section class="about-section">
-    <div class="about-grid">
-      <div class="about-text">
-        <h2>About NorthDrift</h2>
-        <p>NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of
-          precision, attention to detail, and care right to your driveway. From quick maintenance to full
-          transformations, our team delivers both interior and exterior services using premium products and
-          techniques. Trust us to protect your investment while making your car shine like new.</p>
-      </div>
-      <div class="about-images">
-        <img src="2025-toyota-gr-supra.png" alt="Work 1">
-        <img src="667e30cf-f1db-4033-a6a6-b5159ff398b2.png" alt="Work 2">
-      </div>
-    </div>
+  <section class="hero">
+    <h1>Welcome to NorthDrift</h1>
+    <p>Scroll to Learn More</p>
   </section>
 
-  <section class="offer-section">
-    <h2>What We Offer</h2>
-    <p>We offer mobile interior & exterior detailing, brake services, oil changes, and headlight restoration at your convenience. Affordable, reliable, and always done with pride.</p>
+  <section class="about-section">
+    <div class="about-text">
+      <h2>About NorthDrift</h2>
+      <p>NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of precision, attention to detail, and care right to your driveway. From quick maintenance to full transformations, our team delivers both interior and exterior services using premium products and techniques. Trust us to protect your investment while making your car shine like new.</p>
+    </div>
+    <div class="about-images">
+      <img src="2025-toyota-gr-supra.png" alt="Detail Example 1">
+      <img src="TG_DSC2207 1 copy.jpg" alt="Detail Example 2">
+    </div>
   </section>
 
   <div class="services-container" id="services">
@@ -244,7 +218,7 @@
   <script>
     const images = [
       '2025-toyota-gr-supra.png',
-      '667e30cf-f1db-4033-a6a6-b5159ff398b2.png'
+      'TG_DSC2207 1 copy.jpg'
     ];
     let current = 0;
     const imgElement = document.getElementById('slideshow-image');
