@@ -64,46 +64,52 @@
       transform: scale(1.2);
     }
 
-    /* Hero Welcome Section */
-    .hero {
-      background: url('Background.png') center center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 6rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    .scroll-down {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      color: #ccc;
-      cursor: pointer;
-    }
-
-    .scroll-down:hover {
-      color: white;
-    }
-
     .about-section {
       padding: 4rem 2rem 2rem;
-      max-width: 800px;
+      max-width: 1100px;
       margin: auto;
-      text-align: center;
     }
 
-    .about-section h2 {
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+    }
+
+    .about-images {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-images img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .offer-section {
+      background-color: #0d1b2a;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .offer-section h2 {
       font-size: 2rem;
-      color: #0d1b2a;
       margin-bottom: 1rem;
     }
 
-    .about-section p {
+    .offer-section p {
       font-size: 1.1rem;
-      line-height: 1.7;
+      max-width: 700px;
+      margin: auto;
     }
 
     .services-container {
@@ -180,19 +186,25 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Welcome to NorthDrift</h1>
-    <a href="#about" class="scroll-down">▼ Scroll to Learn More</a>
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>About NorthDrift</h2>
+        <p>NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of
+          precision, attention to detail, and care right to your driveway. From quick maintenance to full
+          transformations, our team delivers both interior and exterior services using premium products and
+          techniques. Trust us to protect your investment while making your car shine like new.</p>
+      </div>
+      <div class="about-images">
+        <img src="2025-toyota-gr-supra.png" alt="Work 1">
+        <img src="667e30cf-f1db-4033-a6a6-b5159ff398b2.png" alt="Work 2">
+      </div>
+    </div>
   </section>
 
-  <section id="about" class="about-section">
-    <h2>About NorthDrift</h2>
-    <p>
-      NorthDrift Mobile Detailing is Spokane's go-to for automotive care. We bring the highest level of
-      precision, attention to detail, and care right to your driveway. From quick maintenance to full
-      transformations, our team delivers both interior and exterior services using premium products and
-      techniques. Trust us to protect your investment while making your car shine like new.
-    </p>
+  <section class="offer-section">
+    <h2>What We Offer</h2>
+    <p>We offer mobile interior & exterior detailing, brake services, oil changes, and headlight restoration at your convenience. Affordable, reliable, and always done with pride.</p>
   </section>
 
   <div class="services-container" id="services">
@@ -218,7 +230,6 @@
         <p>Restore clarity to foggy headlights for safety and aesthetics.</p>
       </div>
     </div>
-
     <div class="slideshow-container">
       <h2 style="text-align: center; margin-bottom: 1rem;">Our Work</h2>
       <img src="2025-toyota-gr-supra.png" alt="Work 1" id="slideshow-image">
@@ -233,7 +244,7 @@
   <script>
     const images = [
       '2025-toyota-gr-supra.png',
-      'TG_DSC2207 1 copy.jpg'
+      '667e30cf-f1db-4033-a6a6-b5159ff398b2.png'
     ];
     let current = 0;
     const imgElement = document.getElementById('slideshow-image');
