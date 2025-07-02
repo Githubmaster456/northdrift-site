@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers expert exterior detailing including paint correction." />
+  <meta name="description" content="NorthDrift Mobile Detailing in Spokane, WA offers professional exterior detailing services including paint correction." />
   <title>Exterior Detail - NorthDrift</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
@@ -15,6 +15,9 @@
       color: #333;
       display: flex;
       flex-direction: column;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
     }
     header {
       background: url('Background.png') no-repeat center center/cover;
@@ -56,24 +59,15 @@
     }
     section {
       padding: 2rem;
-      max-width: 1100px;
+      max-width: 95%;
       margin: auto;
-    }
-    h1, h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: #0d1b2a;
-    }
-    .intro-text {
-      margin-bottom: 2rem;
-      font-size: 1.05rem;
-      line-height: 1.6;
     }
     .price-table {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 2rem;
       font-size: 1.1rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
     .column h2 {
       font-size: 1.5rem;
@@ -107,9 +101,11 @@
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
+      transition: transform 0.2s ease-in-out;
     }
     .cta-button a:hover {
       background-color: #14532d;
+      transform: scale(1.05);
     }
     footer {
       background: #0d1b2a;
@@ -118,6 +114,23 @@
       padding: 1rem;
       font-size: 0.9rem;
       margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      .price-table {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo-section {
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -136,15 +149,30 @@
   </header>
 
   <section>
-    <h1>Exterior Detail</h1>
-    <div class="intro-text">
-      <p>
-        Our Basic Exterior Detailing service includes hand washing, wheel and tire scrub, streak free window clean and wax treatement.
-        Our Full Exterior  Detailing service includes a pre soak and rinse, hand washed, a full clay bar dirt and grim removal, wheel and tire scrub, treatment and shine, finishing off with a hydrophobic wax finish to leave your car shiny
-        Our Paint correction will inculde our Full exterior detail but also includes a full cut and polish to completely eliminate swirls in your paint
-      </p>
+    <!-- Bounded-width banner layout -->
+    <div style="background-color: #0d1b2a; border-radius: 8px; overflow: hidden; color: white; margin: 0 auto; padding: 2rem; max-width: 1100px;">
+      <div style="display: flex; flex-wrap: wrap;">
+        <div style="flex: 1 1 300px; padding: 1rem 2rem;">
+          <h2 style="font-size: 2rem;">Our Exterior Packages</h2>
+        </div>
+        <div style="flex: 2 1 400px; background-color: #1e293b; padding: 1.5rem 2rem; border-radius: 0.5rem;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Basic Package</h3>
+          <p style="line-height: 1.6; font-size: 1.05rem;">
+            Our Basic Exterior Detailing includes a hand wash, wheel and tire scrub, streak-free glass cleaning, and application of a premium wax sealant. This is ideal for regular upkeep and improving your vehicle’s shine.
+          </p>
+          <h3 style="font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Full Package</h3>
+          <p style="line-height: 1.6; font-size: 1.05rem;">
+            Full Exterior includes pre-soak, foam bath, clay bar decontamination, deep wheel and tire treatment, trim polish, and a professional-grade ceramic or hydrophobic wax sealant for long-lasting protection and gloss.
+          </p>
+          <h3 style="font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.5rem;">Paint Correction</h3>
+          <p style="line-height: 1.6; font-size: 1.05rem;">
+            Paint Correction includes our Full Detail plus a multi-stage polish to remove surface swirls, oxidation, and minor scratches, restoring true depth and clarity to your paint finish.
+          </p>
+        </div>
+      </div>
     </div>
 
+    <!-- Pricing table with durations -->
     <div class="price-table">
       <div class="column">
         <h2>Vehicle Type</h2>
@@ -155,23 +183,23 @@
 
       <div class="column">
         <h2>Basic Detail</h2>
-        <div class="price-row"><span>$40</span></div>
-        <div class="price-row"><span>$60</span></div>
-        <div class="price-row"><span>$80</span></div>
+        <div class="price-row"><span>$40 (30–40 min)</span></div>
+        <div class="price-row"><span>$60 (40–50 min)</span></div>
+        <div class="price-row"><span>$80 (50–60 min)</span></div>
       </div>
 
       <div class="column">
         <h2>Full Detail</h2>
-        <div class="price-row"><span>$140</span></div>
-        <div class="price-row"><span>$180</span></div>
-        <div class="price-row"><span>$220</span></div>
+        <div class="price-row"><span>$140 (1.5–2 hrs)</span></div>
+        <div class="price-row"><span>$180 (2–2.5 hrs)</span></div>
+        <div class="price-row"><span>$220 (2.5–3 hrs)</span></div>
       </div>
 
       <div class="column">
         <h2>Paint Correction</h2>
-        <div class="price-row"><span>$250+</span></div>
-        <div class="price-row"><span>$300+</span></div>
-        <div class="price-row"><span>$350+</span></div>
+        <div class="price-row"><span>$250+ (3–4 hrs)</span></div>
+        <div class="price-row"><span>$300+ (4–5 hrs)</span></div>
+        <div class="price-row"><span>$350+ (5–6 hrs)</span></div>
       </div>
     </div>
 
