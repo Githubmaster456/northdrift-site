@@ -238,3 +238,15 @@
 
   <script>
     const images = [
+      '2025-toyota-gr-supra.png',
+      'TG_DSC2207 1 copy.jpg'
+    ];
+    let current = 0;
+    const imgElement = document.getElementById('slideshow-image');
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      imgElement.src = images[current];
+    }, 3000);
+  </script>
+</body>
+</html>
