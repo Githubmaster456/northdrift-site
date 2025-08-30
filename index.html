@@ -13,17 +13,22 @@
       background-color: #f4f4f4;
       color: #333;
     }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Montserrat', sans-serif;
-    }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+
+    /* Transparent header over hero */
     header {
-      background: url('Background.png') no-repeat center center/cover;
+      background: transparent;
       color: white;
-      padding: 2.5rem 2rem;
+      padding: 1.25rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      position: absolute;   /* overlay on hero */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
     }
     .logo-section {
       display: flex;
@@ -39,6 +44,7 @@
       font-size: 1rem;
       font-weight: 600;
       color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     }
     .nav-links {
       display: flex;
@@ -49,25 +55,43 @@
       color: white;
       font-weight: 600;
       font-size: 1.1rem;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      opacity: 0.95;
     }
-    .nav-links a:hover {
-      transform: scale(1.2);
-    }
+    .nav-links a:hover { transform: scale(1.08); opacity: 1; }
+
+    /* Single hero with the background image */
     .hero {
+      position: relative;
       background: url('Background.png') no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 5rem 2rem 3rem;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 8rem 2rem 3rem; /* top padding so content clears header */
     }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
+    }
+    .hero > * { position: relative; }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
     .hero p {
       font-size: 1.1rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
     }
+
     .about-section {
       padding: 3rem 1rem;
       max-width: 1200px;
@@ -77,18 +101,14 @@
       gap: 2rem;
       align-items: flex-start;
     }
-    .about-text {
-      flex: 2;
-    }
+    .about-text { flex: 2; }
     .about-text h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #0d1b2a;
     }
-    .about-text p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
+    .about-text p { font-size: 1.05rem; line-height: 1.6; }
+
     .about-images {
       flex: 1;
       display: flex;
@@ -100,6 +120,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     .services-container {
       display: flex;
       justify-content: center;
@@ -107,11 +128,8 @@
       padding: 3rem 1rem;
       gap: 4rem;
     }
-    .services-section {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
+    .services-section { display: flex; flex-direction: column; gap: 1.5rem; }
+
     .service-card {
       background: white;
       padding: 1.2rem 1.5rem;
@@ -121,33 +139,35 @@
       transition: transform 0.2s ease;
       cursor: pointer;
     }
-    .service-card:hover {
-      transform: scale(1.03);
-    }
+    .service-card:hover { transform: scale(1.03); }
     .service-card h3 {
       font-size: 1.1rem;
       color: #000;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
-    .service-card p {
-      font-size: 0.95rem;
-      color: #333;
-    }
-    .slideshow-container {
-      max-width: 420px;
-    }
+    .service-card p { font-size: 0.95rem; color: #333; }
+
+    .slideshow-container { max-width: 420px; }
     .slideshow-container img {
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
+
     footer {
       background: #0d1b2a;
       color: white;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+    }
+
+    /* Simple mobile tweaks */
+    @media (max-width: 768px) {
+      .nav-links { gap: 1rem; }
+      .hero { padding-top: 9rem; }
+      .hero h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -165,7 +185,8 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- Single hero with background + welcome text -->
+  <section class="hero" aria-label="Welcome">
     <h1>Welcome to NorthDrift</h1>
     <p>Scroll to Learn More</p>
   </section>
@@ -217,15 +238,3 @@
 
   <script>
     const images = [
-      '2025-toyota-gr-supra.png',
-      'TG_DSC2207 1 copy.jpg'
-    ];
-    let current = 0;
-    const imgElement = document.getElementById('slideshow-image');
-    setInterval(() => {
-      current = (current + 1) % images.length;
-      imgElement.src = images[current];
-    }, 3000);
-  </script>
-</body>
-</html>
